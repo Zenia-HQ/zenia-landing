@@ -1,3 +1,12 @@
 name = "zenia-landing"
-compatibility_date = "2026-09-01"
-pages_build_output_dir = "public"
+compatibility_date = "2026-06-24"
+pages_build_output_dir = "."
+
+[vars]
+CUPO = "50"
+APP_ORIGIN = "https://imzenia.com"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "zenia"
+database_id = "22be6718-ce34-43cb-92f2-0ff6f48911a8"

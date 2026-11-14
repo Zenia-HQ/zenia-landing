@@ -1,7 +1,4 @@
-const installBtn = document.querySelector("[data-install]");
 const toast = document.querySelector("[data-toast]");
-
-let deferredPrompt = null;
 
 function showToast(message) {
   if (!toast) return;
@@ -12,24 +9,30 @@ function showToast(message) {
   }, 3200);
 }
 
-window.addEventListener("beforeinstallprompt", (event) => {
-  event.preventDefault();
-  deferredPrompt = event;
-  if (installBtn) installBtn.hidden = false;
-});
+function handleForm(form, okSelector) {
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    form.hidden = true;
+    const ok = document.querySelector(okSelector);
+    if (ok) ok.hidden = false;
+  });
+}
 
-installBtn?.addEventListener("click", async () => {
-  if (!deferredPrompt) {
-    showToast("En iOS: Compartir → Agregar a inicio");
-    return;
+handleForm(document.getElementById("form-registro"), "[data-ok-registro]");
+handleForm(document.getElementById("form-empresas"), "[data-ok-empresas]");
+
+document.getElementById("cta-compartir")?.addEventListener("click", async () => {
+  const text = `Me anoté para probar Zenia, una app de bienestar en español que está arrancando en Argentina. Es gratis y hay pocos cupos: ${window.location.origin}`;
+  const wa = `https://wa.me/?text=${encodeURIComponent(text)}`;
+  if (navigator.share) {
+    try {
+      await navigator.share({ title: "Zenia", text, url: window.location.origin });
+      return;
+    } catch (error) {
+      if (error.name === "AbortError") return;
+    }
   }
-  deferredPrompt.prompt();
-  const choice = await deferredPrompt.userChoice;
-  if (choice.outcome === "accepted") {
-    showToast("Zenia quedó instalada");
-  }
-  deferredPrompt = null;
-  installBtn.hidden = true;
+  window.open(wa, "_blank", "noopener");
 });
 
 if ("serviceWorker" in navigator) {

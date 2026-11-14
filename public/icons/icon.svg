@@ -1,5 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="112" fill="#245246"/>
-  <path d="M144 336 256 128l112 208" fill="none" stroke="#f3eee4" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="256" cy="352" r="28" fill="#c4922a"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Zenia"><title>Zenia</title><mask id="za" maskUnits="userSpaceOnUse" x="0" y="0" width="120" height="120"><rect width="120" height="120" fill="#fff"></rect><g transform="rotate(-5 78 102)"><rect x="60.5" y="42.5" width="35" height="63" rx="17.5" fill="#000"></rect></g></mask><g mask="url(#za)"><g transform="rotate(5 42 102)"><rect x="28" y="18" width="28" height="84" rx="14" fill="#232B4D"></rect></g></g><g transform="rotate(-5 78 102)"><rect x="64" y="46" width="28" height="56" rx="14" fill="#DE7356"></rect></g></svg>

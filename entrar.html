@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entrar — Zenia</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600&family=Hanken+Grotesk:wght@400;600&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<main class="section section--paper">
+  <div class="wrap">
+    <div class="card card--form stack">
+      <a class="brand" href="/" aria-label="Zenia, inicio">
+        <img src="/assets/img/zenia-isotipo.svg" alt="" width="28" height="28">
+        <span>zenia</span>
+      </a>
+      <p class="lede" id="estado" role="status">Confirmando tu link…</p>
+      <p class="cap">Zenia es una herramienta de bienestar. No reemplaza la atención profesional.</p>
+    </div>
+  </div>
+</main>
+<script>
+(function () {
+  var estado = document.getElementById('estado');
+  var token = new URLSearchParams(location.search).get('token') || '';
+  if (!token) {
+    estado.textContent = 'Ese link no sirve o ya venció. Volvé a registrarte.';
+    return;
+  }
+  fetch('/api/entrar?token=' + encodeURIComponent(token), { headers: { Accept: 'application/json' } })
+    .then(function (res) { return res.json(); })
+    .then(function (data) {
+      estado.textContent = (data && data.message) || 'Ese link no sirve o ya venció. Volvé a registrarte.';
+    })
+    .catch(function () {
+      estado.textContent = 'No pudimos confirmar el link ahora. Probá de nuevo en un rato.';
+    });
+})();
+</script>
+</body>
+</html>

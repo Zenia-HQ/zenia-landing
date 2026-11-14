@@ -1,11 +1,11 @@
-const CACHE = "zenia-landing-v1";
+const CACHE = "zenia-landing-v2";
 const ASSETS = [
   "/",
   "/index.html",
   "/css/styles.css",
   "/js/app.js",
   "/manifest.webmanifest",
-  "/icons/icon.svg",
+  "/icons/logo.svg",
 ];
 
 self.addEventListener("install", (event) => {

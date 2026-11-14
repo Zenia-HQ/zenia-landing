@@ -3,84 +3,329 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Zenia — el producto, en tu bolsillo</title>
+    <title>Zenia — Bajá un cambio. Todos los días, en 5 minutos.</title>
     <meta
       name="description"
-      content="Zenia es una PWA. Esta es la primera pieza: una landing liviana, instalable y lista para crecer."
+      content="Zenia es una app de bienestar con un coach con IA, audios guiados y un recorrido paso a paso. Estamos abriendo el piloto en Argentina."
     />
-    <meta name="theme-color" content="#245246" />
+    <meta name="theme-color" content="#232B4D" />
     <link rel="manifest" href="/manifest.webmanifest" />
-    <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/icons/icon.svg" />
+    <link rel="icon" href="/icons/logo.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icons/logo.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Fraunces:opsz,wght@9..144,520&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <div class="grain" aria-hidden="true"></div>
-    <div class="wrap">
-      <header>
-        <div class="mark">
-          <svg viewBox="0 0 64 64" aria-hidden="true">
-            <rect width="64" height="64" rx="16" fill="#245246" />
-            <path
-              d="M18 42 32 16l14 26"
-              fill="none"
-              stroke="#f3eee4"
-              stroke-width="5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <circle cx="32" cy="44" r="3.5" fill="#c4922a" />
-          </svg>
-          Zenia
-        </div>
-        <div class="nav-actions">
-          <button class="btn btn-ghost" type="button" data-install hidden>
-            Instalar app
-          </button>
-        </div>
-      </header>
+    <header class="site-header">
+      <a class="brand" href="#top">
+        <img src="/icons/logo.svg" alt="" width="30" height="30" />
+        <span>zenia</span>
+      </a>
+      <nav class="nav">
+        <a href="#empresas">Para empresas</a>
+        <a class="btn btn-solid" href="#registro" id="cta-nav">Sumate al piloto</a>
+      </nav>
+    </header>
 
-      <main class="hero">
-        <section>
-          <p class="eyebrow">Producto nuevo · PWA</p>
-          <h1>Una app que se siente en casa desde el primer tap.</h1>
+    <main id="top">
+      <section class="hero wrap">
+        <div class="hero-copy">
+          <p class="eyebrow">Siempre ahí, cerca</p>
+          <h1>Bajá un cambio. Todos los días, en 5 minutos.</h1>
           <p class="lead">
-            Zenia nace como PWA: rápida, instalable y conectada a un flujo
-            simple. Cada push a GitHub publica esta landing en Cloudflare.
+            Zenia es una app de bienestar con un coach con IA, audios guiados y
+            un recorrido paso a paso para armar el hábito. Estamos abriendo el
+            piloto en Argentina y buscamos a las primeras personas que quieran
+            probarla.
           </p>
-          <div class="cta-row">
-            <a class="btn btn-solid" href="#producto">Ver el primer corte</a>
-            <button class="btn btn-ghost" type="button" data-install>
-              Instalar Zenia
-            </button>
+          <div class="hero-cta">
+            <a class="btn btn-solid btn-lg" href="#registro" id="cta-hero">Sumate al piloto</a>
+            <p class="hint">Gratis · Cupos limitados · Te registrás con tu email, sin contraseña</p>
           </div>
-        </section>
+          <p class="disclaimer">Zenia es una herramienta de bienestar. No reemplaza la atención profesional.</p>
+        </div>
 
-        <aside class="panel" id="producto">
-          <div class="orb" role="img" aria-label="Marca visual de Zenia"></div>
-          <div class="meta">
-            <p>
-              <strong>Landing</strong>
-              Primera pieza pública del producto.
-            </p>
-            <p>
-              <strong>Cloudflare</strong>
-              Deploy automático en cada push.
-            </p>
-            <p>
-              <strong>PWA</strong>
-              Offline básico e icono en el inicio.
-            </p>
+        <aside class="phone" aria-label="Vista previa de la app">
+          <div class="phone-screen">
+            <p class="phone-greet">Buenas noches</p>
+            <p class="phone-q">¿Cómo venís hoy? Elegí lo que más se parezca.</p>
+            <span class="chip">Con la cabeza a mil</span>
+            <div class="phone-card">
+              <p class="phone-kicker">Descanso 2</p>
+              <p>5 min · para cerrar la noche</p>
+            </div>
+            <div class="phone-progress">
+              <span>Capítulo 1</span>
+              <span>paso 3 de 7</span>
+            </div>
           </div>
         </aside>
-      </main>
-    </div>
+      </section>
+
+      <section class="pain wrap">
+        <p>Terminás el día y la cabeza sigue en el trabajo.</p>
+        <p>Bajaste tres apps de meditación. Todas en inglés. No abriste ninguna en un mes.</p>
+        <p>Sabés que te haría bien parar. No encontrás cuándo.</p>
+        <h2>No te falta voluntad.<br />Te falta algo simple, en tu idioma, que entre en tu día.</h2>
+      </section>
+
+      <section class="features wrap">
+        <p class="eyebrow">Qué es Zenia</p>
+        <h2>Tres piezas que trabajan juntas</h2>
+        <div class="cards">
+          <article>
+            <h3>Coach con IA</h3>
+            <p>Un check-in diario y una conversación guiada: te hace las preguntas justas para que frenes, ordenes lo que sentís y elijas un paso chico para hoy.</p>
+            <p class="note">En el piloto el coach trabaja con opciones para elegir, no con texto libre.</p>
+          </article>
+          <article>
+            <h3>Audios guiados</h3>
+            <p>Una serie de audios cortos, de 5 a 6 minutos, para escuchar en orden. Pensados para una pausa en el día o para cerrar la noche.</p>
+            <p class="note">Se escuchan dentro de la app. No hay descarga.</p>
+          </article>
+          <article>
+            <h3>Progreso por capítulos</h3>
+            <p>Avanzás por niveles, de a un paso por día. Si un día no podés, tu progreso te espera: acá no se rompe ninguna racha.</p>
+            <p class="note">El piloto incluye el Capítulo 1 completo. Los siguientes, próximamente.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="steps wrap">
+        <p class="eyebrow">Cómo funciona</p>
+        <h2>Tres pasos y estás adentro</h2>
+        <ol>
+          <li>
+            <strong>Te registrás con tu email.</strong>
+            <span>Te llega un link y entrás, sin contraseña.</span>
+          </li>
+          <li>
+            <strong>La instalás en el celu desde el navegador.</strong>
+            <span>No pasa por ninguna tienda, ni en iPhone ni en Android.</span>
+          </li>
+          <li>
+            <strong>Cada día: un check-in, un audio, un paso.</strong>
+            <span>Te avisamos con un recordatorio para que no dependa de tu memoria.</span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="pilot wrap">
+        <p class="eyebrow">El piloto</p>
+        <h2>De qué se trata</h2>
+        <ul class="plain">
+          <li>Es la primera versión. La estamos probando con un grupo chico antes de abrirla.</li>
+          <li>Dura entre 10 y 21 días, unos minutos por día.</li>
+          <li>Es gratis. No te pedimos tarjeta.</li>
+          <li>Lo único que te pedimos: que la uses de verdad y nos cuentes qué te sirvió y qué no.</li>
+          <li>Cupos limitados en esta primera tanda.</li>
+        </ul>
+      </section>
+
+      <section class="signup wrap" id="registro">
+        <h2>Sumate al piloto</h2>
+        <p class="lead">Dejanos tu email y te mandamos el acceso. Gratis, sin tarjeta y con cupos limitados.</p>
+        <form id="form-registro" class="form">
+          <div class="field-row">
+            <label>
+              Tu email <span class="req">*</span>
+              <input id="registro-email" name="email" type="email" autocomplete="email" placeholder="nombre@correo.com" required />
+            </label>
+            <label>
+              Tu nombre (opcional)
+              <input id="registro-nombre" name="nombre" type="text" autocomplete="name" />
+            </label>
+          </div>
+          <label class="check">
+            <input id="registro-consent" name="consent" type="checkbox" required />
+            <span>Leí y acepto los <a href="#terminos">Términos</a> y la <a href="#privacidad">Política de Privacidad</a>.</span>
+          </label>
+          <label class="check">
+            <input id="registro-novedades" name="novedades" type="checkbox" />
+            <span>Quiero que me avisen de novedades de Zenia.</span>
+          </label>
+          <button class="btn btn-solid btn-lg" id="registro-submit" type="submit">Crear mi cuenta</button>
+          <p class="hint">Te llega un link a tu email. No hay contraseña que recordar.</p>
+          <p class="disclaimer">Zenia es una herramienta de bienestar. No reemplaza la atención profesional.</p>
+        </form>
+        <p class="form-ok" data-ok-registro hidden>Listo. Si hay cupo, te escribimos a ese email.</p>
+      </section>
+
+      <section class="clarity wrap">
+        <p class="eyebrow">Para que quede claro</p>
+        <h2>Qué es y qué no es</h2>
+        <div class="split">
+          <article>
+            <h3>Zenia es</h3>
+            <ul>
+              <li>Una herramienta para armar hábitos de bienestar</li>
+              <li>Un acompañamiento diario, breve y guiado</li>
+              <li>Un espacio privado, en tu idioma</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Zenia no es</h3>
+            <ul>
+              <li>Un servicio de salud</li>
+              <li>Un reemplazo de un profesional</li>
+              <li>Un lugar para resolver una urgencia</li>
+            </ul>
+          </article>
+        </div>
+        <p class="disclaimer">
+          Si estás pasando un momento difícil, hablá con un profesional o mirá los
+          <a href="#ayuda">recursos de ayuda</a>.
+        </p>
+      </section>
+
+      <section class="included wrap">
+        <p class="eyebrow">Hoy, todo esto es gratis</p>
+        <h2>Disponible en el piloto</h2>
+        <ul class="checks">
+          <li>Capítulo 1 completo</li>
+          <li>La serie de audios guiados</li>
+          <li>El coach diario</li>
+          <li>Recordatorios</li>
+        </ul>
+        <div class="soon">
+          <h3>Próximamente</h3>
+          <p>Planes pagos</p>
+          <p>Todavía no definimos precios ni fecha. Si querés enterarte primero, te avisamos al mismo email con el que te registraste.</p>
+          <a class="btn btn-ghost" href="#registro" id="cta-planes-aviso">Avisame cuando estén</a>
+        </div>
+      </section>
+
+      <section class="empresas" id="empresas">
+        <div class="wrap">
+          <p class="eyebrow light">Para empresas</p>
+          <h2>¿Querés llevar Zenia a tu equipo?</h2>
+          <p class="lead light">Estamos armando los primeros pilotos con empresas en Argentina. Dejanos tus datos y te contactamos.</p>
+          <form id="form-empresas" class="form form-dark">
+            <label>
+              Nombre y apellido
+              <input id="emp-nombre" name="nombre" type="text" autocomplete="name" />
+            </label>
+            <div class="field-row">
+              <label>
+                Empresa <span class="req">*</span>
+                <input id="emp-empresa" name="empresa" type="text" autocomplete="organization" required />
+              </label>
+              <label>
+                Cargo <span class="req">*</span>
+                <input id="emp-cargo" name="cargo" type="text" required />
+              </label>
+            </div>
+            <div class="field-row">
+              <label>
+                Cantidad de empleados <span class="req">*</span>
+                <select id="emp-empleados" name="empleados" required>
+                  <option value="">Elegí un rango</option>
+                  <option>1 a 49</option>
+                  <option>50 a 199</option>
+                  <option>200 a 999</option>
+                  <option>1.000 o más</option>
+                </select>
+              </label>
+              <label>
+                Email corporativo <span class="req">*</span>
+                <input id="emp-email" name="email" type="email" autocomplete="email" required />
+              </label>
+            </div>
+            <label>
+              Mensaje (opcional)
+              <textarea id="emp-mensaje" name="mensaje" rows="3"></textarea>
+            </label>
+            <label class="check">
+              <input id="emp-consent" name="consent" type="checkbox" required />
+              <span>Leí y acepto los <a href="#terminos">Términos</a> y la <a href="#privacidad">Política de Privacidad</a>.</span>
+            </label>
+            <label class="check">
+              <input id="emp-contacto" name="contacto" type="checkbox" required />
+              <span>Acepto que me contacten por este pedido.</span>
+            </label>
+            <button class="btn btn-solid btn-lg" id="empresas-submit" type="submit">Quiero que me contacten</button>
+          </form>
+          <p class="form-ok light" data-ok-empresas hidden>Gracias. Te escribimos a ese mail.</p>
+        </div>
+      </section>
+
+      <section class="faq wrap">
+        <h2>Preguntas frecuentes</h2>
+        <details>
+          <summary>¿Es gratis?</summary>
+          <p>Sí. El piloto es gratuito y no te pedimos tarjeta.</p>
+        </details>
+        <details>
+          <summary>¿Es terapia?</summary>
+          <p>No. Zenia es una herramienta de bienestar y no reemplaza la atención profesional.</p>
+        </details>
+        <details>
+          <summary>¿Hablo con una persona?</summary>
+          <p>No. El coach es una inteligencia artificial y te lo decimos siempre.</p>
+        </details>
+        <details>
+          <summary>¿Qué hacen con mis datos?</summary>
+          <p>Guardamos lo mínimo para que la app funcione y para mejorarla. No vendemos ni compartimos tus datos. Podés pedir que los borremos cuando quieras.</p>
+        </details>
+        <details>
+          <summary>¿Tengo que bajar algo de una tienda?</summary>
+          <p>No. Se instala desde el navegador, en iPhone y Android.</p>
+        </details>
+        <details>
+          <summary>¿Cuánto tiempo me lleva?</summary>
+          <p>Unos minutos por día.</p>
+        </details>
+        <details>
+          <summary>¿Puedo invitar a alguien?</summary>
+          <p>Sí, compartile esta página.</p>
+        </details>
+        <details>
+          <summary>¿Qué pasa cuando termina el piloto?</summary>
+          <p>Te avisamos antes. Tu progreso queda guardado.</p>
+        </details>
+      </section>
+
+      <section class="close wrap">
+        <h2>Sumate al piloto</h2>
+        <p class="lead">Cupos limitados en esta primera tanda. Es gratis y lleva unos minutos por día.</p>
+        <div class="hero-cta">
+          <a class="btn btn-solid btn-lg" href="#registro" id="cta-cierre">Quiero probar Zenia</a>
+          <button class="btn btn-ghost" type="button" id="cta-compartir">Compartir por WhatsApp</button>
+        </div>
+        <p class="hint">Se comparte con este mensaje: Me anoté para probar Zenia, una app de bienestar en español que está arrancando en Argentina. Es gratis y hay pocos cupos.</p>
+        <p class="disclaimer">Zenia es una herramienta de bienestar. No reemplaza la atención profesional.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>Hecho en Argentina.</p>
+        <div id="ayuda">
+          <p><strong>¿Necesitás ayuda ahora?</strong></p>
+          <p>Línea 135 (CABA y GBA) · SAME 107 · Emergencias 911.</p>
+          <p class="disclaimer">Zenia es una herramienta de bienestar. No reemplaza la atención profesional.</p>
+        </div>
+        <nav>
+          <a href="#terminos">Términos</a>
+          <a href="#privacidad">Privacidad</a>
+          <a href="#ayuda">Recursos de ayuda</a>
+        </nav>
+        <article id="terminos" class="legal">
+          <h2>Términos</h2>
+          <p>Zenia es un piloto de una herramienta de bienestar. El acceso es por invitación, gratuito y sin garantía de continuidad. No es un servicio de salud ni reemplaza atención profesional.</p>
+        </article>
+        <article id="privacidad" class="legal">
+          <h2>Política de Privacidad</h2>
+          <p>Guardamos lo mínimo para operar el piloto y mejorarlo. No vendemos ni compartimos tus datos. Podés pedir que los borremos cuando quieras escribiendo al mismo canal por el que te registraste.</p>
+        </article>
+      </div>
+    </footer>
+
     <div class="toast" data-toast hidden></div>
     <script src="/js/app.js"></script>
   </body>
