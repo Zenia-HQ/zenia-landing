@@ -220,14 +220,14 @@ button:disabled { opacity: .65; cursor: wait; }
   color: var(--ink-muted);
 }
 .section--night .card { box-shadow: none; }
-.section--night a { color: var(--night-coral-deep); }
-.section--night a.btn--primary {
-  color: var(--ink-on-accent);
-  background: var(--coral-deep);
+.section--night a:not(.btn) { color: var(--night-coral-deep); }
+.section--night .btn--primary {
+  color: #151B33;
+  background: #F0A088;
 }
-.section--night a.btn--primary:hover {
+.section--night .btn--primary:hover {
   background: #FFB79F;
-  color: var(--ink-on-accent);
+  color: #151B33;
 }
 
 /* ---------- FAQ ---------- */
