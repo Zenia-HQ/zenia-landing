@@ -221,7 +221,14 @@ button:disabled { opacity: .65; cursor: wait; }
 }
 .section--night .card { box-shadow: none; }
 .section--night a { color: var(--night-coral-deep); }
-.section--night .btn--primary:hover { background: #FFB79F; }
+.section--night a.btn--primary {
+  color: var(--ink-on-accent);
+  background: var(--coral-deep);
+}
+.section--night a.btn--primary:hover {
+  background: #FFB79F;
+  color: var(--ink-on-accent);
+}
 
 /* ---------- FAQ ---------- */
 .faq { display: grid; grid-template-columns: 1fr; gap: 0; }
